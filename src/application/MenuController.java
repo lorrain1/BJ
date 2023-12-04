@@ -25,7 +25,7 @@ public class MenuController {
 
 	// Main Menu
 	@FXML
-	Button playButton, aboutButton, quitButton;
+	Button playButton, quitButton;
 	// Play Screen
 	@FXML
 	Button backToMenu, startGame;
@@ -146,25 +146,6 @@ public class MenuController {
 
 	}
 
-	@FXML
-	public void aboutButton() {
-		stage = (Stage) playButton.getScene().getWindow();
-
-		try {
-			VBox root = (VBox) FXMLLoader.load(getClass().getResource("about.fxml"));
-			Scene scene = new Scene(root, 1280, 800);
-			stage.setScene(scene);
-			stage.show();
-			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-			stage.setScene(scene);
-			stage.setResizable(false);
-			stage.show();
-
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
 
 	@FXML
 	public void quitButton() {
